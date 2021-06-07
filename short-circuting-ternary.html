@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<h1>Short Circuting</h1>
+
+
+
+<script>
+
+
+const name = "arif";
+
+const uname = name ? name : "user not available";
+
+console.log(uname);
+
+// short circuting  || or operator it always give true result
+
+const myname = "haifa";
+
+const mname = myname || "user not available";
+
+console.log(mname);
+
+// && if any one of them is flase means total false and it will return last value means ename
+
+const email = false
+const ename = "haifa";
+
+const check = email && ename;
+
+console.log(check);
+
+
+const emails = false
+const enames = "haifa";
+
+const checks = (emails && enames) || "wrong users" ;
+
+console.log(checks);
+
+</script>
+</body>
+</html>
