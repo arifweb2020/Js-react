@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<h1>Primitive vs Refernce</h1>
+
+
+
+<script>
+
+// Refernce
+
+
+const person = {
+
+name : "arif",
+email : "ar@gmail.com"
+
+
+};
+
+
+const obj = person;
+
+person.name = "haifa";
+
+console.log (obj);  // it show person object change name coz onj access the same memory
+
+
+// Primitive
+
+let x = 30;
+
+let y = x;
+
+x = 90;
+
+console.log(y);
+
+
+// to reslove this problem in refrence type
+
+const persons = {
+
+name : "arif",
+email : "ar@gmail.com"
+
+
+}
+
+
+const per = {
+		...persons
+}
+
+persons.name= "dcs"
+
+console.log(per);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<h1>Object Destrcturing</h1>
+
+
+
+<script>
+
+const person = {
+
+	name : "arif",
+	age : 27,
+	details : {
+	
+	address : "BTM Bangalore"
+	}
+
+}
+
+
+const {name,age,details:{address}}= person
+
+console.log(`my address is ${address}`);
+
+
+// when key and value is same then we can condensed ex name:name so we can write only name
+const names = "arif";
+
+const ages = 27;
+
+const emp = {
+		
+		names,
+		ages
+
+}
+
+console.log(emp.names);
+
+</script>
+</body>
+</html>
