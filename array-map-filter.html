@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<h1>array-map-filter</h1>
+
+
+
+<script>
+
+const arr = [20,30,40];
+
+const arr1 = [...arr];
+
+console.table(arr1);
+
+
+const fruits = ['mango','apple','grapes'];
+
+/*for (let i=0; i<= fruits.length; i++){
+
+console.log(fruits[i]);
+}*/
+
+fruits.forEach((item)=>{
+
+console.log(item);
+});
+
+//
+const empp = [
+{name:"arif", age:27},
+{name:"haifa", age:25},
+];
+
+
+empp.forEach((i)=>{
+
+console.log(i.age);
+})
+
+
+// push
+
+const empps = [
+{name:"arif", age:27},
+{name:"haifa", age:25},
+];
+
+const newEmp = [];
+
+
+empp.forEach((i)=>{
+
+i.age+=2;
+newEmp.push(i)
+});
+
+console.log(newEmp);
+
+
+// map
+
+const emppss = [
+{name:"arif", age:27},
+{name:"haifa", age:25},
+];
+
+const newE= emppss.map ((item)=>{
+			item.age+= 4;
+			
+			return item;
+
+})
+
+console.log(newE);
+
+
+// filter
+
+const Todo = [
+		{id:1,todo:"eat"},
+		{id:2,todo:"drink"},
+		{id:3,todo:"sleep"},
+
+]
+/*
+const newTodo= Todo.filter((item)=>{
+		return item.id != 3;
+});
+
+console.log(newTodo);*/
+
+
+const removeTodo = (id)=>{
+
+			const newTod= Todo.filter((item)=>item.id != id)
+			console.log(newTod)
+			
+
+}
+
+removeTodo(1);
+
+// console text color
+
+console.log('%c hello arif' , 'color:darkorange')
+
+</script>
+</body>
+</html>
