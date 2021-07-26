@@ -1,3 +1,8 @@
+useMemo is to memoize a calculation result between a function's calls and between renders
+useCallback is to memoize a callback itself (referential equality) between renders
+useRef is to keep data between renders (updating does not fire re-rendering)
+useState is to keep data between renders (updating will fire re-rendering)
+
 import React, { useState, useMemo } from "react";
 
 function App() {
