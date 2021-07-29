@@ -148,3 +148,24 @@ pop up will open
 esc key + shift or :
 
 git push origin yr branch_name
+
+
+
+error: failed to push some refs to 'https://github.com/arifweb2020/con-test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+git pull [remote] [branch]
+
+
+Never force anything, especially if you don't know what you are doing. That said, the right thing for you to do was to pull their work with git pull [remote] [branch], fix any merge conflicts, commit and push your code. Now, that you have force pushed your code and your friend's commit does not exist on the remote, your friend has to do the exact same thing
+
+git pull [remote] [branch]
+Fix merge conflicts. Git would warn you if there are any
+Commit if there were any merge conflicts with git commit
+git push [remote] [branch]
+Then you can do a git pull [remote] [branch] and everything would be in sync.
