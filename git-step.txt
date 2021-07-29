@@ -91,3 +91,30 @@ git push orign part-3
 
 "Remote origin already exists" error
 git remote set-url origin https://github.com/your/repository
+
+
+
+GIT STASH
+
+git stash save "added h2"
+
+git stash list - to check list
+stash@{0}:on master added
+
+git stash apply stash@ -> to retrive data
+
+git stash list
+
+git stash drop stash@ -> to delete stash
+
+git stash clean -> to delete multiple stash
+
+
+git stash -p -> to stash one file in multiple file
+
+
+DELETE Branch
+
+git branch -d <branch_name> - local
+
+$ git push <remote_name> --delete <branch_name> - remote
