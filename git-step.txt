@@ -1,0 +1,93 @@
+1> for version check = git --version
+
+2> for help = git help
+
+3> move to drive = cd D:
+
+4> check content of drive d = dir
+
+5> to make folder in D drive = mkdir ArifTest
+
+6> inter in ArifTest Folder = cd ArifTest
+
+----------- GIT START --------------------
+
+for git configuration globally = git config --global user.name "arif"
+
+for git configuration locally = git config  user.name "ariflocal"
+
+for git configuration globally = git config --global user.email "arif@gmail.com"
+
+for git configuration locally = git config  user.email "ariflocal@gmail.com"
+
+7> to check file or git is initialized or not in that folder = git status
+
+8> for initiliaze git in that folder = git init
+
+9> for add any file ex - index.html in TEST folder = touch index.html
+
+10> for add file in git = git add filename ex- git add index.html
+
+11> for add or update multiple files = git add .
+
+12> every time u cahanged in file u must = git add. 
+
+13> for commit = git commit -m 'first commit index.html file'
+
+14> for track your work = git log
+
+15> to check our project is connected or not in github = git remote
+
+--------- to put project on github ------
+
+16> to add project on github = git remote add origin https://github.com/arifweb2020/TEST21.git
+
+17> to push yr projrct = git push -u origin master
+
+18> if u want to change some thing locally 
+
+reset git init = rm -rf .git/
+
+steps are :-
+
+git add .
+
+git commit -m 'my second commit in index.html'
+
+git push -u origin master
+
+19> to check branch = git branch
+
+20> to check content in file = cat index.html
+
+
+21> to create local branch = git branch local or git checkout -b local
+
+22> to copy master file all in local = git checkout local
+
+then git add .
+
+	git commit -m 'i removed the line'
+	
+	git push -u origin local
+	
+23> to go back on master branch = git checkout master 
+
+24> to merge local code to master = git merge local
+
+
+if u are in = git checkout develop 
+
+and u want to merge your-repo with develop = git merge your-repo
+
+or 
+
+if u are in = git checkout your-repo
+
+and u want to merge develop with your-repo = git merge develop
+git checkout -b part3
+
+git push orign part-3
+
+"Remote origin already exists" error
+git remote set-url origin https://github.com/your/repository
