@@ -123,3 +123,28 @@ $ git push <remote_name> --delete <branch_name> - remote
 by mistake u want to commit on master branch but u commit any other branch
 git checkout master
 git cherry-pick (commit num 32222213213)
+
+
+GIT CONFLICT
+
+if u pull origin master to yr branch
+
+ex- u are in yr branch
+
+git pull origin master
+
+it will show
+ * branch            master     -> FETCH_HEAD
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+git add .
+
+git commit
+
+pop up will open
+
+esc key + shift or :
+
+git push origin yr branch_name
