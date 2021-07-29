@@ -118,3 +118,8 @@ DELETE Branch
 git branch -d <branch_name> - local
 
 $ git push <remote_name> --delete <branch_name> - remote
+
+
+by mistake u want to commit on master branch but u commit any other branch
+git checkout master
+git cherry-pick (commit num 32222213213)
