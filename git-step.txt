@@ -169,3 +169,7 @@ Fix merge conflicts. Git would warn you if there are any
 Commit if there were any merge conflicts with git commit
 git push [remote] [branch]
 Then you can do a git pull [remote] [branch] and everything would be in sync.
+
+Delete the problematic files.
+Run
+git reset --hard.
