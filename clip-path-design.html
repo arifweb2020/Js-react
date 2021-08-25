@@ -1,0 +1,88 @@
+<html>
+<head>
+<!-- https://bennettfeely.com/clippy/ -->
+<style>
+img {
+
+clip-path:circle(40% at 50% 50%)
+
+/*
+
+40% - radius
+
+50% - x axis
+
+50% - ya axis
+*/
+
+}
+
+.myelipse{
+clip-path:ellipse(10% 40% at 50% 50%)
+
+/*
+
+10% - horizontal radius
+40% - vertical radius
+50% - x axis
+
+50% - ya axis
+
+
+
+*/
+}
+
+.rect{
+
+clip-path:inset(10% 20% 10% 10%)
+
+/*
+
+10% - top
+20% - right
+10% - bottom
+10% - left
+
+/*
+}
+
+#mypolygon{
+
+clip-path:polygon(50% 0% ,0% 100% ,100% 100%) !important;
+
+/*
+50% 0% - top point
+0% 100% - left bottom point
+100% 100% - right bottom
+
+
+*/
+}
+
+
+</style>
+</head>
+
+<body>
+
+<h1>Clip-Path circle </h1>
+
+<img src="https://www.nationalscholarshipexam.com/images/national-scholarship.png" />
+
+
+<h1>Clip-Path ellipse </h1>
+
+<img src="https://www.nationalscholarshipexam.com/images/national-scholarship.png" class="myelipse"/>
+
+
+<h1>Clip-Path inset - rectangle </h1>
+
+<img src="https://www.nationalscholarshipexam.com/images/national-scholarship.png" class="rect"/>
+
+
+<h1>Clip-Path polygon </h1>
+
+<img src="https://www.nationalscholarshipexam.com/images/national-scholarship.png" style="clip-path:polygon(50% 0% ,0% 100% ,100% 100%)" id="mypolygon"/>
+</body>
+</html>
