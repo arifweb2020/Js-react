@@ -5,10 +5,11 @@ import { ProgressBar } from "react-bootstrap";
 import SignatureCanvas from "react-signature-canvas";
 import { accountUpdate } from "./../../data/dataStore";
 import Loader from "./../../../components/loader/loader";
-//import States from "./states";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  DatePicker
+} from '@material-ui/pickers';
 
 const AccountSetup = (props) => {
   const { setupComplete, disableDrag, enableDrag } = props
@@ -16,7 +17,7 @@ const AccountSetup = (props) => {
   const [stage, setStage] = useState("dobInfo");
   const [pan, setPan] = useState("");
   const [email, setEmail] = useState("");
-  const [dob, setDob] = useState("");
+  const [dob, setDob] = useState(new Date());
   const [pincode, setPincode] = useState("");
   // const [gender, setGender] = useState("");
   // const [state, setState] = useState("");
@@ -91,6 +92,10 @@ const AccountSetup = (props) => {
         setStage("addressInfo");
       }, 2000);
     }
+  };
+
+  const toInputUppercase = e => {
+    e.target.value = ("" + e.target.value).toUpperCase();
   };
 
   const verifyBankAccount = () => {
@@ -200,22 +205,19 @@ const AccountSetup = (props) => {
                   value={pan}
                   onChange={(e) => setPan(e.target.value)}
                   maxLength={10}
+                  onInput={toInputUppercase}
                 />
               </div>
               <div className="form-group m-t-20">
-                <label className="label">Your date of birth</label>
-                {/* <input
-                  type="date"
-                  className="form-control"
-                  value={dob}
-                  onChange={(e) => setDob(e.target.value)}
-                /> */}
-                <DatePicker selected={dob}
-                  dateFormat="yyyy/MM/dd"
-                  placeholderText="yyyy-mm-dd"
-                  onChange={(date) => {
-                    setDob(date)
-                  }} />
+                <label className="label">Please enter your date of birth</label>
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                  <DatePicker
+                    value={dob}
+                    onChange={(e) => setDob(e)}
+                    animateYearScrolling
+                    format="dd/MM/yyyy"
+                  />
+                </MuiPickersUtilsProvider>
               </div>
               <div className="form-group m-t-20">
                 <label className="label">The email you will receive updates on</label>
