@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=EMvhdm1N0-Q
+
 import clevertap from 'clevertap-web-sdk'
 
 import AccountDetails from './app/investment/profilePage/accountDetails/AccountDetails';
