@@ -1,3 +1,4 @@
+https://medium.com/@ibamibrhm/custom-upload-button-image-preview-and-image-upload-with-react-hooks-a7977618ee8c
 .bankVerifyFailStage {
   h3 {
     font-family: Satoshi-Regular;
