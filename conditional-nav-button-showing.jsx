@@ -39,7 +39,7 @@ class InvestmentHeader extends React.Component {
                         </span>
                       </a>
                     </button>
-                    {this.props.location.pathname === "/home" ? (
+                    {this.props.location.pathname === "/home" || this.props.location.pathname === "/home/portfolio" ? (
                       <button className="btn btnLogOut" onClick={this.logout}>Logout</button>) :
                       null}
                   </div>
