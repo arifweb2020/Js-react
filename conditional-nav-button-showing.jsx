@@ -4,7 +4,7 @@ import whatsAppImg from "../../assets/Images/whatsAppImg.svg";
 import "../header/headerStyle.scss";
 
 
-class InvestmentHeader extends React.Component {
+class Arif extends React.Component {
 
   logout() {
     window.localStorage.clear();
@@ -30,7 +30,7 @@ class InvestmentHeader extends React.Component {
                   <div className="rightHeaderWrapper">
                     <button className="btn">
                       <a
-                        href="whatsapp://send?text=Hello World!&phone=+918976901474"
+                        href="whatsapp://send?text=Hello World!&phone=+91923334324432"
                         target="_new"
                       >
                         Expert assitance
@@ -53,4 +53,18 @@ class InvestmentHeader extends React.Component {
   }
 }
 
-export default InvestmentHeader;
+export default Arif;
+
+for functional component use location we hav e to use
+
+const Child = () => {
+  const location = useLocation();
+  const history = useHistory();
+  const match = useRouteMatch("write-the-url-you-want-to-match-here");
+
+  return (
+    <div>{location.pathname}</div>
+  )
+}
+
+export default Child
