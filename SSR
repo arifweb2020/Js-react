@@ -1,0 +1,40 @@
+Server-side rendering (SSR) is the traditional rendering system. Here the server serves the static HTML, CSS, JavaScript and other static assets. The content of the webpage is rendered by HTML itself.
+
+In this blog, I will explain everything you need to know about server-side rendering. I have created a video about it already. Feel free to check that out. And if you like the video then don't forget to SUBSCRIBE to my channel.
+
+How does server-side rendering work?
+Abstractly There are two entities on the internet. One is the Client and another one is Server.
+
+First, the client(browser) sends a request to the server.
+
+Server then check the request and sends the HTML file as a response.
+
+Browser starts parsing the HTML from top to bottom. When the parser sees the link tag for CSS it blocks the parsing process and starts downloading the CSS files. Then it starts parsing the CSS.
+
+After the CSS parsing is completed, the parser starts parsing the HTML again. As the parser parsing the HTML, the browser dom gets pained with content. Also with styles. Because the CSS is already parsed. That is why we put the CSS link tag at the top part of the HTML.
+
+After the dom is pained with the content, your webpage is now viewable. Then the parser comes across the script tag at the bottom of the HTML. Now the browser will start downloading the JavaScript and then will parse the JavaScript.
+
+The JavaScript might be big and might take some time depends on how big the files are. Parsing Javascript is a heavier task than parsing HTML and CSS. That's why we put the script tag at the bottom of the HTML.
+
+After the parsing is completed, the webpage is now both viewable and interactive.
+
+Server Side Rendering Pros
+Great SEO. Because the content is already present on the HTML.
+
+Initial load is fast. Not the whole application data is not served by the browser. Only the necessary data for the page is sent.
+
+User doesn't have to see a blank page on the initial load. Because the content is rendered by HTML not JavaScript.
+
+No need for external libraries or frameworks.
+
+Server Side Rendering cons
+Frequent server calls.
+
+Slow navigation to any routes.
+
+Page refresh while visiting any routes (not necessarily).
+
+Bad user Experience when data changes frequently.
+
+So, that's all you need to know about servers side rendering I guess.
