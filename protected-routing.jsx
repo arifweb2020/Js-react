@@ -1,17 +1,14 @@
 https://www.youtube.com/watch?v=EMvhdm1N0-Q
+https://www.youtube.com/watch?v=0DYELZ6ynlU
 
-import clevertap from 'clevertap-web-sdk'
 
-import AccountDetails from './app/investment/profilePage/accountDetails/AccountDetails';
-
-import InvestmentComplete from "./app/investment/investAmount/investmentComplete"
 
 import InvestmentPrivateRoute from "./app/InvestmentPrivateRoute"
 
 
 
-export default function DezervApp() {
-@@ -45,7 +46,7 @@ export default function DezervApp() {
+export default function arif() {
+@@ -45,7 +46,7 @@ export default function arif() {
 
         <Route exact path="/invite" component={(props) => <AppContainer {...props}><Invite {...props} /></AppContainer>} />
 
