@@ -15,10 +15,18 @@
 15> for forammating data : db.food.find().pretty()
 16> to update the field: db.food.update({_id:ObjectId("616d7af9b854bcf73998ac61")},{$set:{name:'papaya'}})
 17> to delete particular field : db.food.deleteOne({_id:ObjectId("616d7af9b854bcf73998ac61")})
-18> to delete Many filedd : db.food.deleteMany({
+18> to delete Many field : db.food.deleteMany({
 _id:{$in:[ObjectId("616d7af9b854bcf73998ac61"),ObjectId("616d7af9b854bcf73998ac61")]}
 })
 19> insert releated data : db.shoes.update({_id:ObjectId("616d7a84b854bcf73998ac60")},{$set:{reviews:[{review:'good'},{review:'bad'}]}})
 20> equal operation : db.food.find({price:{$eq:5}})
 21> greate than operation : db.food.find({price:{$gt:5}})
 22> logical and operation (both condtion must be true) : db.shoes.find({$and:[{price:{$eq:10}}, {name:{$eq:'fila'}}]})
+23> for loop : for(let i=1; i < 5000; i++){
+ db.shoes.insert({name: 'product', price:i})
+}
+24> to create index in collection : db.shoes.createIndex({name:1})
+25> to get index value : db.shoes.getIndexes()
+26> if we dont want id in output : db.shoes.find({name:'nike'}, {_id:0,name:1})
+27> to find only one value in document : db.shoes.find({name:'nike'}).pretty().limit(1)
+28> to find only one value after 1st value in document : db.shoes.find({name:'nike'}).pretty().limit(1).skip(1)
