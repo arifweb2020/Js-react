@@ -19,6 +19,19 @@ const Dashboard = () => {
 }
 
 
+useEffect(()=>{
+const imd = setInterval(()=>{
+    mdd();
+},3000)
+return () => clearInterval(imd);
+},[data])
+
+const mdd = async ()=>{
+    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+    const res1 = await res.json()
+    console.log(res1.data);
+    setData(res1.data)
+}
 
 
 
