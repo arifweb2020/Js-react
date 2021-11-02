@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Button } from './components/Button.style';
-import { AppConatiner } from './components/Container.style';
+import { AppConatiner, MyHeader } from './components/Container.style';
 
 function App() {
   return (
     <AppConatiner>
-     <h2>Styled Component</h2>
+     <MyHeader>Styled Component</MyHeader>
      <Button backgroundColor="pink">click</Button>
      <Button backgroundColor="blue">click</Button>
      </AppConatiner>
@@ -14,6 +14,7 @@ function App() {
 }
 
 export default App;
+
 
 
 components
@@ -26,6 +27,10 @@ height:100vh;
 background-color:red;
 
 
+`
+
+export const MyHeader = styled.h2`
+color:green
 `
 
 
