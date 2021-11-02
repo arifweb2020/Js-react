@@ -47,3 +47,81 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { Container, Grid, Box } from '@mui/material';
+import React from 'react';
+import { AppConatiner } from './components/Container.style';
+import { styled } from '@mui/styles';
+import Nav from './components/Nav';
+
+const MyBox = styled(Box)({
+  // backgroundColor:`${(props)=>props.bgColor}`
+  background: "red",
+  padding: "20px"
+})
+
+const MyDiv = styled('div')({
+  // backgroundColor:`${(props)=>props.bgColor}`
+  background: "green",
+  padding: "4px",
+  display: "flex",
+  justifyContent: "space-around"
+})
+
+
+const InDiv = styled('div')({
+  backgroundColor: "#f1f1f1",
+  width: "100px",
+  margin: "10px",
+  textAlign: "center",
+  lineHeight: "75px",
+  fontSize: "30px"
+})
+
+function App(props) {
+  return (
+    <AppConatiner>
+      <Nav />
+      <Container fixed style={{ marginTop: '20px' }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <MyBox>xs=8</MyBox>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box>
+              <MyDiv>
+                <InDiv>1</InDiv>
+                <InDiv>2</InDiv>
+              </MyDiv>
+            </Box>
+          </Grid>
+          <Grid item xs={4}>
+            <Box>xs=4</Box>
+          </Grid>
+          <Grid item xs={8}>
+            <Box>xs=8</Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </AppConatiner>
+  );
+}
+
+export default App;
