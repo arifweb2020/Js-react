@@ -3,7 +3,7 @@
  * 
  * Author : Arif
  */
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import {
     Box,
     Grid,
@@ -139,6 +139,7 @@ function FeedbackReport(props) {
         )
     }
 
+
     return (
         <MainContainer>
             <Grid container >
@@ -159,7 +160,7 @@ function FeedbackReport(props) {
                         <Grid item xs={8} sm={8} md={10}>
                             <FilePreview>
                                 <span>{image} </span>
-                                {image === "" ? null : <span ><ClosedIcon /> </span>}
+                                {image === "" ? null : <span onClick={()=>{setImage("")}}><ClosedIcon /> </span>}
                             </FilePreview>
                         </Grid>
                         <Grid item xs={4} sm={4} md={2}>
