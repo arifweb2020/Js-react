@@ -1,4 +1,7 @@
+
 import {resetForm,formSubmission,sum} from './Dashboards'
+
+describe('form update', () => {
 
 it("when a & b is number", ()=>{
 const result = sum(1,2);
@@ -47,4 +50,83 @@ file:"",
 comments:""
 })
 })
+})
 
+
+// test case for redux
+
+/**
+ * unit test case
+ */
+import updatefeedbackReportDataReducer, { updatefeedbackReportData } from './FeedbackReportSlice';
+
+describe('feedbackReport reducer', () => {
+    const initialState = {
+        totalRecords: {
+            title: "Total Records",
+            count: 500,
+        },
+        approvedRecords: {
+            title: "Approved Records",
+            count: 500,
+        },
+        issueRecords: {
+            title: "Records with Issue",
+            count: 500,
+        }
+    }
+
+    it('should update the uploaded data in file', () => {
+        expect(updatefeedbackReportDataReducer(undefined, { type: 'unknown' })).toEqual(
+            {
+                totalRecords: {
+                    title: "Total Records",
+                    count: 500,
+                },
+                approvedRecords: {
+                    title: "Approved Records",
+                    count: 500,
+                },
+                issueRecords: {
+                    title: "Records with Issue",
+                    count: 500,
+                }
+            }
+        );
+    });
+
+    it('should handle uploaded data in file', () => {
+        const actual = updatefeedbackReportDataReducer(initialState, updatefeedbackReportData({
+            totalRecords: {
+                title: "Total Records",
+                count: 500,
+            },
+            approvedRecords: {
+                title: "Approved Records",
+                count: 500,
+            },
+            issueRecords: {
+                title: "Records with Issue",
+                count: 500,
+            }
+
+        }));
+        expect(actual).toEqual(
+            {
+                totalRecords: {
+                    title: "Total Records",
+                    count: 500,
+                },
+                approvedRecords: {
+                    title: "Approved Records",
+                    count: 500,
+                },
+                issueRecords: {
+                    title: "Records with Issue",
+                    count: 500,
+                }
+            }
+        );
+    });
+
+})
