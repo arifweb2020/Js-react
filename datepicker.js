@@ -1,3 +1,14 @@
+<DatePicker
+                                    selected={date}
+                                    onChange={(date) => setDate(date)}
+                                    className="inputFiledText dateField"
+                                    //minDate={moment().toDate()}
+                                    dateFormat="MMMM, yyyy"
+                                    showMonthYearPicker
+                                />
+                                        
+                                        for showing month and year only https://reactdatepicker.com/
+
 
 import React, { useState } from 'react';
 import {
