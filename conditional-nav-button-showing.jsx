@@ -5,7 +5,13 @@ const location = useLocation();
 
 location.pathname === "/reports/feedback"
 
-
+<Redirect from="/" to="/404" exact />
+             <Route
+               //exact
+               //path="/404"
+               name="Page-404"
+               render={(props) => <Page404 {...props} />}
+             />
 
 
 
