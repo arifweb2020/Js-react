@@ -1,3 +1,14 @@
+for HOOKS
+
+import { useLocation } from "react-router-dom";
+const location = useLocation();
+
+location.pathname === "/reports/feedback"
+
+
+
+
+
 import React from "react";
 import logo from "../../assets/Images/logo.png";
 import whatsAppImg from "../../assets/Images/whatsAppImg.svg";
