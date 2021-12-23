@@ -90,3 +90,24 @@ build
 .dockerignore
 Dockerfile
 Dockerfile.prod
+
+
+
+// default.conf
+
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    location / {
+        root   /etc/nginx/html/;
+        try_files $uri /payout-admin/index.html$is_args$args =404;
+        index  index.html /payout-admin/index.htm;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
