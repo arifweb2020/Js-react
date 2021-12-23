@@ -26,6 +26,9 @@
 	
 	@rootw44:/app# exit // for exit
 	
+	// Buil docker file for production sp4_final == project folder
+	docker build -f Dockerfile.prod -t payout-image:Sp4_final .    
+        docker run -dt -p 80:80 payout-image:Sp4_final
 	
 	// Dockerfile
 	# pulling official base image
