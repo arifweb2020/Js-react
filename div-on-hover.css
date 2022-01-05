@@ -1,0 +1,56 @@
+const CardBox = styled(Box)`
+position: relative;
+    left: 88px;
+    top: -31px;
+ height: 20px;
+  width: 66px;
+  border-radius: 5px;
+  background-color: #D1451A;
+ & p{
+    height: 24px;
+    width: 49px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-left:8px;
+ }
+ & div {
+    display: none;
+  }
+  & p:hover + div{
+      z-index:9999;
+      position:absolute;
+    cursor:pointer;
+    margin-left:24px;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 67.5px;
+    width: 231.5px;
+    border: 1.5px solid #D1451A;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 14px 0 #E7A08A;
+    & p{
+        height: 35px;
+        width: 172px;
+        color: #262439;
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 18px;
+        margin-left:28px;
+      }
+  }
+
+ `
+
+<CardBox>
+        <p>On hover</p>
+        <div>
+          <p>dewfefwefwref </p>
+        </div>
+      </CardBox>
