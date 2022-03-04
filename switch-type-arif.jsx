@@ -97,6 +97,19 @@ function AllTransaction() {
 
   return (
     <>
+    {
+                        asd.map((ele) => {
+                            return <div>
+                                {
+                                    ele.name === "Leanne Graham" ?
+                                        <p style={{ color: 'red' }}>{ele.name}</p> :
+                                        ele.name === "Patricia Lebsack" ?
+                                        <p style={{ color: 'blue' }}>{ele.name}</p> :
+                                        <p>{ele.name}</p>
+                                }
+                            </div>
+                        })
+                    }
       <div className="profilePage">
         <div className="container-fluid topSection">
           <div className="profileContainers">
