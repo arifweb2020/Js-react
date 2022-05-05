@@ -45,3 +45,118 @@ justify-content:center;
 
 </body>
 </html>
+
+
+
+
+<html>
+<head>
+<title>TOP</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: red;
+  font-family: "Poppins", sans-serif;
+}
+.container{
+max-width:900px;
+margin:0 auto;
+}
+
+.grid{
+display:flex;
+background-color: DodgerBlue;
+flex-wrap:wrap;
+justify-content:space-evenly;
+}
+
+.grid > div{
+background-color: #f1f1f1;
+  font-size: 30px;
+  display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 10px;
+    position: relative;
+   
+}
+
+.card{
+background:#fff;
+min-height:200px;
+margin:10px;
+box-shadow: 0px 8px 15px rgb(0 0 0 / 60%);
+
+}
+
+.heading{
+padding:20px;
+}
+
+@media screen and (max-width:767px){
+.card{
+background:grey;
+}
+.heading h1{
+font-size:16px;
+}
+.grid > div{
+width:428px;
+background:green;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:960px){
+.card{
+background:green;
+}
+.heading h1{
+font-size:21px;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:960px){
+.card{
+background:green;
+}
+.heading h1{
+font-size:21px;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="grid">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+</div>
+
+<div class="card">
+<div class="heading">
+<h1>Welcome</h1>
+</div>
+</div>
+</div>
+</body>
+
+</html>
