@@ -79,3 +79,43 @@ const Login=()=>{
 }
  
 export default Login
+
+
+
+// 2nd way
+
+import React, { useEffect, useState, Component } from "react";
+import "./styles.css";
+
+/**https://stackoverflow.com/questions/63409136/set-countdown-timer-react-js */
+
+const RESET_INTERVAL_S = 300; // 300s = 5m * 60s/m
+
+const formatTime = (time) =>
+  `${String(Math.floor(time / 60)).padStart(2, "0")}:${String(
+    time % 60
+  ).padStart(2, "0")}`;
+
+const Timer = ({ time }) => {
+  const timeRemain = RESET_INTERVAL_S - (time % RESET_INTERVAL_S);
+
+  return (
+    <>
+      <div>Time: {formatTime(time)}</div>
+      <div>Countdown Timer: {formatTime(timeRemain)}</div>
+    </>
+  );
+};
+
+const IntervalTimerFunctional = () => {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setTime((t) => t + 1);
+    }, 1000);
+    return () => clearInterval(timerId);
+  }, []);
+
+  return <Timer time={time} />;
+};
