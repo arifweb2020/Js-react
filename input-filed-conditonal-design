@@ -1,0 +1,75 @@
+// css
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: blue
+  }
+  input:focus {
+    border-color: green
+  }
+
+  .myInput{
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color:#fff
+  }
+
+  .myInput:focus {
+    border-color:#fff;
+  }
+
+  span{
+      font-size: 9px;
+      font-size: 9px;
+    position: relative;
+    right: 54%;
+    top: 12px;
+
+  }
+
+
+
+
+import React from 'react';
+import './logins.css'
+
+function Login(props) {
+    //  const [counter, setCounter] = React.useState(60);
+
+    const [name, setName] = React.useState("");
+
+    const enterName = (e) => {
+        setName(e.target.value)
+    }
+
+    return (
+        <>
+            <h1>Login</h1>
+            
+
+            <div style={{ background: "#fff", padding: "20px", width: "300px" }}>
+                {
+                    name.length > 0 ?
+                        (
+                            <>
+                            <input type="text" value={name}
+                             
+                                onChange={enterName} className="myInput" maxLength={10}/>
+                                <span>Mobile Number</span>
+                                </>
+                        )
+                        :
+                        (
+                            <input type="text" value={name}
+                                placeholder='enter name'
+                                onChange={enterName} />
+                        )
+                }
+
+
+            </div>
+        </>
+    );
+}
+
+export default Login;
